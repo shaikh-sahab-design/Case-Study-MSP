@@ -475,3 +475,7 @@ a { color: inherit; }
 .swap figcaption span { grid-area: 1 / 1; transition: opacity .5s, transform .5s var(--ease); }
 .swap .c-thanks, .swap.thanks .c-contact { opacity: 0; transform: translateY(6px); }
 .swap.thanks .c-thanks { opacity: 1; transform: none; }
+.design .two { align-items: center; }
+.swap .frame { height: 500px; aspect-ratio: auto; }
+.swap .frame img { object-fit: cover; object-position: center top; }
+@media (max-width: 720px) { .swap .frame { height: auto; aspect-ratio: 543 / 500; } }
