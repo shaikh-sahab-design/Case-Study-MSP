@@ -37,7 +37,7 @@
   var anchor = document.createElement("div");
   anchor.setAttribute("aria-hidden", "true");
   slides[0].parentNode.insertBefore(anchor, slides[0]);
-  var vh = 0, tops = [], heights = [];
+  var vh = 0, tops = [], heights = [], covStart = [], covEnd = [];
   function measure() {
     vh = window.innerHeight;
     var y = anchor.getBoundingClientRect().top + window.scrollY;
@@ -49,6 +49,15 @@
       // Stick only once the slide's bottom meets the bottom of the screen
       s.style.top = Math.min(0, vh - h) + "px";
     });
+    // Each slide covers the one before it between these two scroll positions.
+    // It starts once the previous slide has stuck (so short slides don't jump)
+    // and ends where it reaches the top, or at the end of the page.
+    var maxScroll = Math.max(0, document.documentElement.scrollHeight - vh);
+    for (var j = 1; j < slides.length; j++) {
+      var prevStick = tops[j - 1] + Math.max(0, heights[j - 1] - vh);
+      covStart[j] = Math.max(tops[j] - vh, prevStick);
+      covEnd[j] = Math.min(tops[j], maxScroll);
+    }
     update();
   }
 
@@ -59,16 +68,14 @@
     for (var i = 0; i < slides.length; i++) {
       var s = slides[i];
       var h = heights[i];
-      var stickAt = tops[i] + Math.max(0, h - vh);  // scroll position where it sticks
       var depth = 0, p = 0;
       // How far later slides have covered this one
       for (var j = i + 1; j < slides.length; j++) {
-        var start = tops[j] - vh;                    // next slide begins entering
-        var q = clamp((y - start) / vh);
+        var q = clamp((y - covStart[j]) / Math.max(1, covEnd[j] - covStart[j]));
         if (q <= 0) break;
         if (j === i + 1) p = q; else depth += q;
       }
-      if (y < stickAt || p <= 0) {
+      if (p <= 0) {
         s.style.transform = "";
         s.style.filter = "";
         s.style.borderRadius = "";
@@ -114,12 +121,13 @@
   // Snap: settle on the start of a slide, or on the bottom of a tall one
   var snapTimer = null, snapping = false;
   function snapPoints() {
-    var pts = [];
+    var max = Math.max(0, document.documentElement.scrollHeight - vh);
+    var pts = [max];
     for (var i = 0; i < slides.length; i++) {
       pts.push(tops[i]);
       if (heights[i] > vh + 4) pts.push(tops[i] + heights[i] - vh);
     }
-    return pts;
+    return pts.map(function (p) { return Math.min(p, max); });
   }
   function trySnap() {
     if (!S.snap) return;

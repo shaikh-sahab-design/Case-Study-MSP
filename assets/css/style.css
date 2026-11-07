@@ -500,3 +500,5 @@ html.lenis, html.lenis body { height: auto; }
   .fit .story .big { margin-bottom: 30px; }
   .slide.fit.close { justify-content: center; padding-top: calc(48px * var(--z)); }
 }
+/* The last slide fills the screen so it fully covers the one before it */
+.stack .slide:last-of-type { min-height: max(calc(700px * var(--z)), 100vh); }
