@@ -172,22 +172,42 @@
         <h2 class="h2">Design in Figma, extended by Claude</h2>
         <p class="sub">The site started as a Figma design system. When a new page was needed, I asked Claude Code to design it inside the same file, using the existing components and styles.</p>
       </div>
-      <div class="prompt" data-reveal>
+      <div class="prompt prompt-input" data-reveal>
         <div class="who"><span class="av">A</span>Adil's prompt, word for word, 29 Oct</div>
-        <div class="mono typed">
+        <div class="mono typed" data-type aria-label="https://www.figma.com/design/ZzkDGsQpgD3kax5rfUjfq7/MSP-Website. Create a thank-you page design in the given Figma link. Also use the same brand guidelines as in the Figma link. Attaching the content for the page. Also, make this page more lively and attractive; you can use the skill /ui-ux-pro-max">
           <p>https://www.figma.com/design/ZzkDGsQpgD3kax5rfUjfq7/MSP-Website</p>
           <p>Create a thank-you page design in the given Figma link. Also use the same brand guidelines as in the Figma link. Attaching the content for the page.</p>
           <p>Also, make this page more lively and attractive; you can use the skill /ui-ux-pro-max</p>
         </div>
+        <div class="pi-bar"><span class="pi-hint">Message Claude Code</span><span class="pi-send" aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14"><path d="M8 13V3M3.5 7.5 8 3l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
       </div>
       <div class="outcome" data-reveal>
         <h3 class="h3">What came back</h3>
         <p>A Thank You frame placed beside the other pages, reusing the file's own nav, CTA band and footer. It added a progress tracker and a new contact card component with editable properties. Claude also flagged a mismatched support email between two pages for me to settle.</p>
       </div>
     </div>
-    <div class="screens">
-      <figure class="shot" data-reveal="right"><div class="frame"><img src="assets/img/s05-thanks.webp" alt="The Thank You page design" loading="lazy"></div><figcaption>The Thank You page, with the progress tracker under the actions</figcaption></figure>
-      <figure class="shot" data-reveal="right"><div class="frame"><img src="assets/img/s05-contact.webp" alt="The Contact page design" loading="lazy"></div><figcaption>The Contact page whose Submit Inquiry button now leads to it</figcaption></figure>
+    <div class="demo" data-reveal="right" data-demo
+         data-contact="https://shaikh-sahab-design.github.io/ITServices/contact/"
+         data-thanks="https://shaikh-sahab-design.github.io/ITServices/thank-you/">
+      <div class="browser">
+        <div class="bbar">
+          <span class="lights"><i></i><i></i><i></i></span>
+          <span class="url"><svg viewBox="0 0 16 16" width="10" height="10" aria-hidden="true"><path d="M4.5 7V5a3.5 3.5 0 0 1 7 0v2M3.5 7h9v6.5h-9z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg><span class="url-text">shaikh-sahab-design.github.io/ITServices/contact/</span></span>
+          <button class="replay" type="button" aria-label="Replay the demo"><svg viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><path d="M2.8 8a5.2 5.2 0 1 0 1.6-3.8M2.5 2.5v3h3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Replay</button>
+        </div>
+        <div class="viewport">
+          <div class="poster"><span class="spin" aria-hidden="true"></span><p>The Contact page opens once the prompt is sent</p></div>
+          <iframe title="Live demo of the Contact page and Thank You page" tabindex="-1"></iframe>
+          <div class="veil" aria-hidden="true"></div>
+          <span class="cursor" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M5 3l14 8-6.2 1.6L10 19z" fill="#0c0e16" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/></svg></span>
+        </div>
+      </div>
+      <ol class="steps" aria-label="Demo steps">
+        <li data-step="1">Prompt sent</li>
+        <li data-step="2">Contact form filled</li>
+        <li data-step="3">Submit Inquiry</li>
+        <li data-step="4">Thank You page</li>
+      </ol>
     </div>
   </div>
   <p class="foot">MSP Website case study</p><p class="pno">05</p>
@@ -417,5 +437,6 @@
 
 </main>
 <script src="assets/js/main.js"></script>
+<script src="assets/js/demo.js"></script>
 </body>
 </html>
