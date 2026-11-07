@@ -78,11 +78,16 @@
   slides.forEach(function (s) {
     var a = document.createElement("a");
     a.href = "#" + s.id;
-    a.innerHTML = "<span>" + (s.getAttribute("data-title") || s.id) + "</span>";
+    var title = s.getAttribute("data-title") || s.id;
+    a.innerHTML = '<span class="peek"><img alt="" width="180" height="107" data-src="assets/img/thumbs/' + s.id + '.webp"><em>' + title + "</em></span>";
     a.setAttribute("aria-label", s.getAttribute("data-title") || s.id);
     nav.appendChild(a);
   });
   var links = nav.querySelectorAll("a");
+  // Load the section previews once the page has settled
+  function loadPeeks() { nav.querySelectorAll("img[data-src]").forEach(function (im) { im.src = im.getAttribute("data-src"); im.removeAttribute("data-src"); }); }
+  if (document.readyState === "complete") setTimeout(loadPeeks, 300); else window.addEventListener("load", function () { setTimeout(loadPeeks, 300); });
+  nav.addEventListener("pointerenter", loadPeeks, { once: true });
   var ticking = false;
   function onScroll() {
     var h = document.documentElement.scrollHeight - window.innerHeight;
