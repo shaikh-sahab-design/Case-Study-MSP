@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>One Man Army: MSP Website Case Study</title>
+<meta name="description" content="How one UI/UX designer designed, coded, shipped and tested a 28-page MSP website for Folio3, with Claude Code as the build partner.">
+<meta property="og:title" content="One Man Army: MSP Website Case Study">
+<meta property="og:description" content="A complete MSP website, from Figma to live, carried by one designer.">
+<meta property="og:image" content="assets/img/cover-desktop.webp">
+<link rel="icon" href="assets/img/profile.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bakbak+One&family=IBM+Plex+Mono:wght@400;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="progress" aria-hidden="true"><span></span></div>
+<nav class="dots" aria-label="Sections"></nav>
+
+<main>
+
+<!-- 01 Cover -->
+<section class="slide dark cover" id="cover" data-title="Cover">
+  <img class="glow glow-cover" src="assets/svg/glow-cover.svg" alt="" aria-hidden="true">
+  <div class="inner">
+    <header class="topbar line-b" data-reveal="fade">
+      <p><strong>Folio3</strong>&nbsp;&nbsp;Managed IT and Cybersecurity Services</p>
+      <p class="doc">Case study <span class="vr"></span> November 2026</p>
+    </header>
+
+    <div class="cover-grid">
+      <div class="headline">
+        <h1 class="display">
+          <span class="line"><span>One Man Army.</span></span>
+          <span class="line"><span>A complete MSP website.</span></span>
+          <span class="line red"><span>From Figma to live.</span></span>
+        </h1>
+        <p class="lede" data-reveal>How the UI/UX designer designed, coded, shipped and tested a 28-page website on his own, with Claude Code as the build partner.</p>
+        <ul class="tools" data-stagger>
+          <li class="tag"><img src="assets/img/tool-figma.png" alt="" width="9" height="14">Figma</li>
+          <li class="tag"><img src="assets/img/tool-claude.png" alt="" width="14" height="14">Claude Code</li>
+          <li class="tag"><img src="assets/img/tool-github.png" alt="" width="14" height="14">GitHub</li>
+          <li class="tag"><img src="assets/img/tool-wordpress.png" alt="" width="14" height="14">WordPress</li>
+          <li class="tag"><img src="assets/img/tool-elementor.png" alt="" width="14" height="14">Elementor</li>
+        </ul>
+      </div>
+
+      <div class="devices" data-parallax>
+        <div class="laptop">
+          <div class="lid">
+            <img class="camera" src="assets/svg/camera.svg" alt="" width="5" height="5">
+            <div class="screen"><img src="assets/img/cover-desktop.webp" alt="The Folio3 MSP home page on a laptop"></div>
+          </div>
+          <div class="hinge"></div>
+          <div class="deck"><span class="notch"></span></div>
+        </div>
+        <div class="phone">
+          <div class="pscreen"><img src="assets/img/cover-phone.webp" alt="The Folio3 MSP home page on a phone"></div>
+          <span class="island"></span>
+          <span class="btn b1"></span><span class="btn b2"></span><span class="btn b3"></span>
+        </div>
+      </div>
+    </div>
+
+    <footer class="meta line-t" data-stagger>
+      <div class="who">
+        <img src="assets/img/profile.png" alt="Muhammad Adil Shaikh" width="33" height="33">
+        <div><span>Created by</span><b>Muhammad Adil Shaikh</b></div>
+      </div>
+      <div class="role"><span>Role</span><b>UI/UX <em class="y">AI</em> Designer</b></div>
+      <div class="site"><span>Website</span><b><a href="https://itservicesbeta.folio3.site" target="_blank" rel="noopener">itservicesbeta.folio3.site</a></b></div>
+      <div class="proj"><span>Project</span><b>MSP Website</b></div>
+    </footer>
+  </div>
+  <a class="scroll-cue" href="#glance" aria-label="Scroll to the next section"><span></span></a>
+</section>
+
+<!-- 02 The project at a glance -->
+<section class="slide light glance" id="glance" data-title="At a glance">
+  <div class="story-panel">
+    <img class="glow glow-02" src="assets/svg/glow-02.svg" alt="" aria-hidden="true">
+    <img class="f3-logo" src="assets/img/folio3-logo.png" alt="" aria-hidden="true">
+    <div class="story" data-stagger>
+      <h2 class="h2">The project at a glance</h2>
+      <p class="big">Folio3 needed a new website for its Managed IT and Cybersecurity line, covering Managed IT, Managed Security and AI Security, with service pages, case studies, a blog and a contact flow.</p>
+      <p class="muted">A website like this usually moves through several hands. A designer makes the screens, a front-end developer builds them, a WordPress developer moves them into the CMS, and someone tests the result.</p>
+      <p class="muted">Here, one person carried it end to end. I designed the site in Figma, then directed Claude Code to turn the designs into a working, animated site. I reviewed every change through GitHub, rebuilt all pages as editable Elementor pages in WordPress, and checked the finished build.</p>
+    </div>
+  </div>
+  <div class="glance-right">
+    <div class="stats" data-stagger>
+      <div class="stat"><span class="ibox red"><img src="assets/svg/icon-person.svg" alt=""></span><div><b class="num" data-count="1">1</b><p>person across design, code, CMS and testing</p></div></div>
+      <div class="stat"><span class="ibox blue"><img src="assets/svg/icon-cal.svg" alt=""></span><div><b class="num" data-count="5">5</b><p>days of build activity, 26 Oct to 5 Nov</p></div></div>
+      <div class="stat"><span class="ibox blue"><img src="assets/svg/icon-merge.svg" alt=""></span><div><b class="num" data-count="33">33</b><p>pull requests reviewed and merged</p></div></div>
+      <div class="stat"><span class="ibox yellow"><img src="assets/svg/icon-pages.svg" alt=""></span><div><b class="num" data-count="28">28</b><p>live pages in WordPress, built in Elementor</p></div></div>
+      <div class="stat"><span class="ibox blue"><img src="assets/svg/icon-code.svg" alt=""></span><div><b class="num" data-count="17" data-suffix="k">17k</b><p>lines of production code in the site</p></div></div>
+      <div class="stat"><span class="ibox blue"><img src="assets/svg/icon-layers.svg" alt=""></span><div><b class="num" data-count="6998">6,998</b><p>editable Elementor sections and widgets</p></div></div>
+    </div>
+    <div class="timeline" data-reveal>
+      <h3 class="h3">Eleven days, five of them building</h3>
+      <ol class="days">
+        <li><i class="c"></i>26 Oct</li><li><i class="c"></i>27 Oct</li><li><i></i>28 Oct</li><li><i class="c"></i>29 Oct</li>
+        <li><i></i>30 Oct</li><li><i></i>31 Oct</li><li><i></i>1 Nov</li><li><i></i>2 Nov</li><li><i></i>3 Nov</li>
+        <li><i class="split"></i>4 Nov</li><li><i class="w"></i>5 Nov</li>
+      </ol>
+      <ul class="legend">
+        <li><i class="c"></i>Code commits</li><li><i class="w"></i>WordPress pages built</li><li><i></i>No build activity</li>
+      </ul>
+    </div>
+  </div>
+  <p class="pno">02</p>
+</section>
+
+<!-- 03 Five roles, one owner -->
+<section class="slide light roles" id="roles" data-title="Five roles">
+  <div class="inner">
+    <div class="split-head" data-reveal>
+      <h2 class="h2">Five roles, one owner</h2>
+      <p class="sub">Each row is a job a separate specialist would usually own. Here every one ran through the designer.</p>
+    </div>
+    <div class="summary" data-stagger>
+      <div class="sum"><b>5 of 5</b><span>roles carried by one designer</span></div>
+      <div class="sum"><b>1</b><span>person accountable from Figma to live</span></div>
+      <div class="sum"><b>Every change</b><span>reviewed in GitHub before it shipped</span></div>
+    </div>
+    <div class="matrix" role="table" aria-label="Roles on this project">
+      <div class="mrow head" role="row"><span role="columnheader">Role</span><span role="columnheader">Usually owned by</span><span role="columnheader">On this project</span><span role="columnheader">Tools</span><span role="columnheader">Result</span></div>
+      <div class="mrow" role="row" data-reveal><span class="rname"><i class="ibox sm blue"><img src="assets/svg/r-design.svg" alt=""></i>UI/UX design</span><span class="strike">Designer</span><span class="owner"><img src="assets/svg/r-dot.svg" alt="">Adil + Claude Code</span><span class="tool">Figma, Figma MCP</span><span><em class="pill">Every page designed</em></span></div>
+      <div class="mrow" role="row" data-reveal><span class="rname"><i class="ibox sm blue"><img src="assets/svg/r-code.svg" alt=""></i>Front-end build and motion</span><span class="strike">Front-end developer</span><span class="owner"><img src="assets/svg/r-dot.svg" alt="">Adil + Claude Code</span><span class="tool">Claude Code, Next.js</span><span><em class="pill">33 pages built</em></span></div>
+      <div class="mrow" role="row" data-reveal><span class="rname"><i class="ibox sm blue"><img src="assets/svg/r-merge.svg" alt=""></i>Version control and deploys</span><span class="strike">Developer</span><span class="owner"><img src="assets/svg/r-dot.svg" alt="">Adil + Claude Code</span><span class="tool">GitHub, Actions</span><span><em class="pill">33 PRs merged</em></span></div>
+      <div class="mrow" role="row" data-reveal><span class="rname"><i class="ibox sm blue"><img src="assets/svg/r-wp.svg" alt=""></i>WordPress and Elementor</span><span class="strike">WordPress developer</span><span class="owner"><img src="assets/svg/r-dot.svg" alt="">Adil + Claude Code</span><span class="tool">Elementor, Novamira MCP</span><span><em class="pill">28 pages live</em></span></div>
+      <div class="mrow" role="row" data-reveal><span class="rname"><i class="ibox sm blue"><img src="assets/svg/r-qa.svg" alt=""></i>Testing and code review</span><span class="strike">QA engineer</span><span class="owner"><img src="assets/svg/r-dot.svg" alt="">Adil + Claude Code</span><span class="tool">Review and audit skills</span><span><em class="pill">33/33 and 28/28 pass</em></span></div>
+    </div>
+  </div>
+  <p class="foot">MSP Website case study</p><p class="pno">03</p>
+</section>
+
+<!-- 04 The process -->
+<section class="slide dark process" id="process" data-title="Process">
+  <div class="glow glow-04" aria-hidden="true"></div>
+  <div class="inner">
+    <div class="head" data-reveal>
+      <h2 class="h2">The process, start to finish</h2>
+      <p class="sub">Each stage hands a finished, reviewable result to the next. Nothing was rebuilt by hand between stages.</p>
+    </div>
+    <div class="stages">
+      <span class="connector" aria-hidden="true"></span>
+      <div class="stage"><span class="dot">01</span><h3>Design</h3><p>Screens and the brand system in Figma. Claude Code reads the file and adds new pages in the same system.</p><ul class="chips"><li>Figma</li><li>Figma MCP</li><li>ui-ux-pro-max</li></ul></div>
+      <div class="stage"><span class="dot">02</span><h3>Build</h3><p>Figma frames become a Next.js site, responsive down to 360px, with motion added page by page.</p><ul class="chips"><li>Claude Code</li><li>Next.js 15</li><li>Framer Motion</li><li>animate</li></ul></div>
+      <div class="stage"><span class="dot">03</span><h3>Review and ship</h3><p>Every change arrives as a pull request. I review, merge, and the site redeploys itself.</p><ul class="chips"><li>GitHub</li><li>GitHub Actions</li><li>GitHub Pages</li></ul></div>
+      <div class="stage"><span class="dot red">04</span><h3>WordPress</h3><p>Claude Code connects to WordPress and rebuilds each page as native Elementor, so the team can edit it.</p><ul class="chips"><li>WordPress</li><li>Elementor</li><li>Novamira MCP</li></ul></div>
+      <div class="stage"><span class="dot red">05</span><h3>Test</h3><p>Production build, live-page checks, a security-first code review skill and audits of every skill used.</p><ul class="chips"><li>wordpress-code-review</li><li>website-audit</li><li>skill-inspector</li></ul></div>
+    </div>
+    <div class="outputs" data-stagger>
+      <figure class="out"><div class="oshot"><img src="assets/img/out-figma.webp" alt="Thank You page in Figma" loading="lazy"></div><figcaption><b>Figma file</b><span>Every page designed, new ones added by Claude</span></figcaption></figure>
+      <figure class="out"><div class="oshot"><img src="assets/img/out-pages.webp" alt="Home page of the Next.js site" loading="lazy"></div><figcaption><b>33 pages</b><span>A responsive, animated Next.js site</span></figcaption></figure>
+      <figure class="out"><div class="oshot"><img src="assets/img/out-prs.webp" alt="Case studies page" loading="lazy"></div><figcaption><b>33 PRs</b><span>Reviewed, merged and deployed</span></figcaption></figure>
+      <figure class="out"><div class="oshot"><img src="assets/img/out-wp.webp" alt="Services overview page" loading="lazy"></div><figcaption><b>28 pages</b><span>Native, editable Elementor pages</span></figcaption></figure>
+      <figure class="out"><div class="oshot"><img src="assets/img/out-green.webp" alt="Network design page" loading="lazy"></div><figcaption><b>All green</b><span>Build, live-page and skill checks</span></figcaption></figure>
+    </div>
+  </div>
+  <p class="foot">MSP Website case study</p><p class="pno">04</p>
+</section>
+
+<!-- 05 Design in Figma -->
+<section class="slide light design" id="design" data-title="Design">
+  <div class="inner two">
+    <div class="content">
+      <div class="stage-head" data-stagger>
+        <p class="num-tag">01</p>
+        <h2 class="h2">Design in Figma, extended by Claude</h2>
+        <p class="sub">The site started as a Figma design system. When a new page was needed, I asked Claude Code to design it inside the same file, using the existing components and styles.</p>
+      </div>
+      <div class="prompt" data-reveal>
+        <div class="who"><span class="av">A</span>Adil's prompt, word for word, 29 Oct</div>
+        <div class="mono typed">
+          <p>https://www.figma.com/design/ZzkDGsQpgD3kax5rfUjfq7/MSP-Website</p>
+          <p>Create a thank-you page design in the given Figma link. Also use the same brand guidelines as in the Figma link. Attaching the content for the page.</p>
+          <p>Also, make this page more lively and attractive; you can use the skill /ui-ux-pro-max</p>
+        </div>
+      </div>
+      <div class="outcome" data-reveal>
+        <h3 class="h3">What came back</h3>
+        <p>A Thank You frame placed beside the other pages, reusing the file's own nav, CTA band and footer. It added a progress tracker and a new contact card component with editable properties. Claude also flagged a mismatched support email between two pages for me to settle.</p>
+      </div>
+    </div>
+    <div class="screens">
+      <figure class="shot" data-reveal="right"><div class="frame"><img src="assets/img/s05-thanks.webp" alt="The Thank You page design" loading="lazy"></div><figcaption>The Thank You page, with the progress tracker under the actions</figcaption></figure>
+      <figure class="shot" data-reveal="right"><div class="frame"><img src="assets/img/s05-contact.webp" alt="The Contact page design" loading="lazy"></div><figcaption>The Contact page whose Submit Inquiry button now leads to it</figcaption></figure>
+    </div>
+  </div>
+  <p class="foot">MSP Website case study</p><p class="pno">05</p>
+</section>
+
+<!-- 06 Build -->
+<section class="slide light build" id="build" data-title="Build">
+  <div class="inner two rev">
+    <div class="screens">
+      <figure class="shot" data-reveal="left"><div class="frame"><img src="assets/img/s06-home.webp" alt="The Home hero built in Next.js" loading="lazy"></div><figcaption>Home hero, built from the Figma frame, with a draggable light &amp; dark divider across the dashboard</figcaption></figure>
+      <figure class="shot" data-reveal="left"><div class="frame"><img src="assets/img/s06-cards.webp" alt="The three service cards" loading="lazy"></div><figcaption>The three service cards, which flip in 3D on hover to reveal their details</figcaption></figure>
+    </div>
+    <div class="content">
+      <div class="stage-head" data-stagger>
+        <p class="num-tag">02</p>
+        <h2 class="h2">From Figma frames to a working site</h2>
+        <p class="sub">Claude Code read each Figma frame through the Figma MCP and wrote it as Next.js with Framer Motion. My job was to judge the result against the design and send it back until it matched.</p>
+      </div>
+      <div class="features" data-stagger>
+        <div class="feat"><b>3D flip service cards</b><span>Cards turn over to their Figma hover state</span></div>
+        <div class="feat"><b>Pinned hero banner</b><span>The trust section scrolls up over the hero</span></div>
+        <div class="feat"><b>Services mega menu</b><span>All service pages reachable from the top nav</span></div>
+        <div class="feat"><b>Scrolling card rails</b><span>Used across the security service pages</span></div>
+        <div class="feat"><b>Sticky table of contents</b><span>On the blog article layout</span></div>
+        <div class="feat"><b>Thank You motion</b><span>Confetti, sound-wave rings and a headline that rises in</span></div>
+        <div class="feat"><b>Tilted card backs</b><span>A final motion pass on the Home cards</span></div>
+        <div class="feat"><b>Reduced motion respected</b><span>Every effect switches off for users who ask</span></div>
+      </div>
+      <p class="note" data-reveal>Every item above maps to a commit in the project's GitHub history.</p>
+    </div>
+  </div>
+  <p class="foot">MSP Website case study</p><p class="pno">06</p>
+</section>
+
+<!-- 07 Review and ship -->
+<section class="slide dark review" id="review" data-title="Review">
+  <img class="glow glow-07" src="assets/svg/glow-07.svg" alt="" aria-hidden="true">
+  <div class="inner">
+    <div class="stage-head wide" data-stagger>
+      <p class="num-tag">03</p>
+      <h2 class="h2">Every change reviewed, every merge shipped</h2>
+      <p class="sub">Claude Code worked in branches and opened pull requests. I reviewed each one before it went in, so the history doubles as a full audit trail.</p>
+    </div>
+    <div class="review-grid">
+      <div class="left">
+        <div class="card chart" data-reveal>
+          <h3 class="h3">Where the work landed</h3>
+          <div class="bars">
+            <div class="bar" style="--h:219px"><span>29</span><i></i></div>
+            <div class="bar" style="--h:159px"><span>20</span><i></i></div>
+            <div class="bar" style="--h:51px"><span>4</span><i></i></div>
+            <div class="bar" style="--h:32px"><span>1</span><i></i></div>
+            <div class="bar w" style="--h:212px"><span>28</span><i></i></div>
+          </div>
+          <div class="labels"><span>26 Oct</span><span>27 Oct</span><span>29 Oct</span><span>4 Nov</span><span>4 to 5 Nov</span></div>
+          <ul class="legend"><li><i class="y"></i>Commits to the code repo</li><li><i class="w"></i>Pages built in WordPress</li></ul>
+        </div>
+        <div class="facts" data-stagger>
+          <div><b>54 commits</b><span>47 of them linked to a Claude Code session</span></div>
+          <div><b>Auto deploy</b><span>Each merge to main rebuilds and publishes the site</span></div>
+          <div><b>3 sessions</b><span>The whole build ran across three Claude Code sessions</span></div>
+        </div>
+      </div>
+      <div class="card prs" data-reveal="right">
+        <div class="prs-head"><span>Merged pull requests, latest first</span><span>33 in total</span></div>
+        <ol class="pr-list" data-stagger="40">
+          <li><span>#33</span><p>Home service cards: TiltedCard motion on the back side</p><time>4 Nov</time></li>
+          <li><span>#32</span><p>Thank You headline: rise, swell and settle on load</p><time>29 Oct</time></li>
+          <li><span>#31</span><p>Thank You banner: confetti, sound-wave rings and scroll overlay</p><time>29 Oct</time></li>
+          <li><span>#30</span><p>Add Thank You page and link Submit Inquiry to it</p><time>29 Oct</time></li>
+          <li><span>#29</span><p>Add AI Governance and Risk page</p><time>29 Oct</time></li>
+          <li><span>#26</span><p>Add AI Agent Security page</p><time>27 Oct</time></li>
+          <li><span>#20</span><p>Rebuild Services page service cards to match Figma</p><time>27 Oct</time></li>
+          <li><span>#12</span><p>Add services mega menu to the top navigation</p><time>27 Oct</time></li>
+          <li><span>#8</span><p>Add SOC Managed Security Services page from Figma</p><time>26 Oct</time></li>
+          <li><span>#4</span><p>Add motion to the inner pages</p><time>26 Oct</time></li>
+          <li><span>#2</span><p>Turn service cards over with a 3D flip on hover</p><time>26 Oct</time></li>
+          <li><span>#1</span><p>Add animated Home page built from Figma</p><time>26 Oct</time></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  <p class="foot">MSP Website case study</p><p class="pno">07</p>
+</section>
+
+<!-- 08 The site, as built -->
+<section class="slide dark gallery" id="gallery" data-title="The site">
+  <div class="inner">
+    <h2 class="h2" data-reveal>The site, as built</h2>
+    <div class="grid-g">
+      <figure class="g wide" data-reveal><div class="frame"><img src="assets/img/g-managedit.webp" alt="Managed IT Services page" loading="lazy"></div><figcaption>Managed IT Services</figcaption></figure>
+      <figure class="g wide" data-reveal><div class="frame"><img src="assets/img/g-arcom.webp" alt="Arcom case study page" loading="lazy"></div><figcaption>Arcom case study</figcaption></figure>
+      <figure class="g" data-reveal><div class="frame"><img src="assets/img/g-about.webp" alt="About page" loading="lazy"></div><figcaption>About</figcaption></figure>
+      <figure class="g" data-reveal><div class="frame"><img src="assets/img/g-msec.webp" alt="Managed Security Services page" loading="lazy"></div><figcaption>Managed Security Services</figcaption></figure>
+      <figure class="g" data-reveal><div class="frame"><img src="assets/img/g-soc.webp" alt="SOC Managed Security page" loading="lazy"></div><figcaption>SOC Managed Security</figcaption></figure>
+      <figure class="g" data-reveal><div class="frame"><img src="assets/img/g-cases.webp" alt="Case Studies page" loading="lazy"></div><figcaption>Case Studies</figcaption></figure>
+    </div>
+  </div>
+  <p class="foot">Screens shown are the live Figma page designs</p><p class="pno">08</p>
+</section>
+
+<!-- 09 WordPress -->
+<section class="slide light wp" id="wordpress" data-title="WordPress">
+  <div class="inner">
+    <div class="wp-top">
+      <div class="stage-head" data-stagger>
+        <p class="num-tag">04</p>
+        <h2 class="h2">Into WordPress, ready for the team</h2>
+        <p class="sub">A coded site is only half the job if marketing can't edit it. I connected Claude Code to the WordPress site and had it rebuild every page as native Elementor content.</p>
+      </div>
+      <div class="prompt shadow" data-reveal="right">
+        <div class="who"><span class="av">B</span>Adil's prompt, 4 Nov, shortened and with login details hidden</div>
+        <div class="mono typed">
+          <p>I want to add this WordPress site as an MCP server to this AI tool.</p>
+          <p>Server URL: https://itservicesbeta.folio3.site/wp-json/mcp/novamira</p>
+          <p>Username: <span class="dim">[hidden]</span>&nbsp;&nbsp; Application password: <span class="dim">[hidden]</span></p>
+          <p>Transport: @automattic/mcp-wordpress-remote via npx</p>
+          <p>After writing the config, restart the MCP session, then verify by listing the server's tools.</p>
+        </div>
+      </div>
+    </div>
+    <h3 class="h3 list-title" data-reveal>Every page, rebuilt in Elementor</h3>
+    <div class="pages">
+      <div class="col">
+        <ul class="plist" data-stagger="30">
+          <li class="grp">Core pages</li>
+          <li>Home<code>/</code></li><li>Services overview<code>/services</code></li><li>About Us<code>/about</code></li><li>Case Studies<code>/case-studies</code></li><li>Blog<code>/blog</code></li><li>Contact Us<code>/contact</code></li><li>Thank You<code>/thank-you</code></li>
+          <li class="grp">Managed IT</li>
+          <li>Managed IT Services</li><li>Network Design and SD-WAN</li><li>IT Migration Services</li><li>Backup and Disaster Recovery</li><li>Virtual CIO Consulting</li><li>Database Management</li><li>Identity and Access Management</li>
+        </ul>
+      </div>
+      <div class="col">
+        <ul class="plist" data-stagger="30">
+          <li class="grp">Managed Security</li>
+          <li>Managed Security Services</li><li>SOC Managed Security</li><li>Managed Detection and Response</li><li>Managed Cloud Security</li><li>Endpoint Security</li><li>Vulnerability Management</li>
+          <li class="grp">AI Security</li>
+          <li>AI Security Services</li><li>AI Security Assessment</li><li>AI Data Security</li><li>AI Application and LLM Security</li><li>AI Agent Security</li><li>AI Red Teaming</li><li>AI Security Monitoring</li><li>AI Governance Consulting</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <p class="foot">MSP Website case study</p><p class="pno">09</p>
+</section>
+
+<!-- 10 Testing -->
+<section class="slide dark testing" id="testing" data-title="Testing">
+  <img class="glow glow-10" src="assets/svg/glow-10.svg" alt="" aria-hidden="true">
+  <div class="inner">
+    <div class="stage-head wide" data-stagger>
+      <p class="num-tag">05</p>
+      <h2 class="h2">Tested before it was called done</h2>
+      <p class="sub">Testing ran at three levels: the code itself, the live WordPress pages, and the AI skills that touched the project.</p>
+    </div>
+    <div class="checks" data-stagger>
+      <div class="card check"><p class="score"><b class="num" data-count="33">33</b><span> / 33</span></p><h3>Production build passes</h3><p>The full Next.js site compiles and generates every page, including the three case studies and the blog article, with no errors.</p><p class="status"><img src="assets/svg/check-10.svg" alt="">Rechecked on 6 Nov</p></div>
+      <div class="card check"><p class="score"><b class="num" data-count="28">28</b><span> / 28</span></p><h3>Live pages respond</h3><p>Every published WordPress page was requested from the server and returned successfully, each with its own page title.</p><p class="status"><img src="assets/svg/check-10.svg" alt="">Rechecked on 6 Nov</p></div>
+      <div class="card check"><p class="score"><b class="num" data-count="3">3</b></p><h3>Review and audit skills</h3><p>A security-first WordPress code review skill written for this project, a website audit skill for UX and conversion, and a skill inspector that vets third-party skills before use.</p><p class="status"><img src="assets/svg/check-10.svg" alt="">Set up by the designer</p></div>
+    </div>
+    <div class="tiles" data-tiles>
+      <span>/</span><span>svc</span><span>mit</span><span>msec</span><span>ai</span><span>aia</span><span>aid</span><span>llm</span><span>agt</span><span>red</span><span>mon</span><span>gov</span><span>soc</span><span>mdr</span>
+      <span>cld</span><span>end</span><span>vul</span><span>net</span><span>mig</span><span>dr</span><span>vcio</span><span>db</span><span>iam</span><span>abt</span><span>blog</span><span>case</span><span>con</span><span>ty</span>
+    </div>
+    <p class="tiles-note" data-reveal>Each tile is one live WordPress page that passed the check.</p>
+  </div>
+  <p class="foot">MSP Website case study</p><p class="pno">10</p>
+</section>
+
+<!-- 11 Skills -->
+<section class="slide light skills" id="skills" data-title="Skills">
+  <img class="gear" src="assets/svg/setting.svg" alt="" aria-hidden="true">
+  <div class="inner">
+    <div class="stage-head wide" data-stagger>
+      <h2 class="h2">The skills behind the work</h2>
+      <p class="sub">Skills are reusable instruction sets that make Claude Code work to a standard. I installed, checked and in some cases wrote them before relying on them.</p>
+    </div>
+    <div class="skill-grid" data-stagger>
+      <div class="skill sk-blue"><b>ui-ux-pro-max</b><p>UX rules and design patterns, used when designing new pages such as Thank You.</p><span>Design. Installed from GitHub and checked first.</span></div>
+      <div class="skill sk-blue"><b>figma-use&nbsp;&nbsp;+&nbsp;&nbsp;figma-generate-design</b><p>Let Claude Code read and write the Figma file directly, using its own components and styles.</p><span>Design and build</span></div>
+      <div class="skill sk-blue"><b>animate</b><p>Motion standards for React: smooth easing, springs for interactive parts, and reduced-motion support.</p><span>Build. Audited for hidden calls before use.</span></div>
+      <div class="skill sk-red"><b>wordpress-code-review</b><p>A security-first review for WordPress code with a severity rating and fixes. Written for this project.</p><span>Testing. Created by the designer.</span></div>
+      <div class="skill sk-red"><b>website-audit</b><p>A UX, conversion, SEO and accessibility audit for live websites.</p><span>Testing</span></div>
+      <div class="skill sk-yellow"><b>skill-inspector&nbsp;&nbsp;+&nbsp;&nbsp;hallmark</b><p>One vets skills for unsafe code before they are installed. The other sets a design standard for new pages, including this document.</p><span>Safety and quality</span></div>
+    </div>
+  </div>
+  <p class="foot">MSP Website case study</p><p class="pno">11</p>
+</section>
+
+<!-- 12 Prompts -->
+<section class="slide dark prompts" id="prompts" data-title="Prompts">
+  <img class="glow glow-12" src="assets/svg/glow-12.svg" alt="" aria-hidden="true">
+  <div class="inner">
+    <div class="stage-head" data-stagger>
+      <h2 class="h2">Plain language in, working results out</h2>
+      <p class="sub narrow">The prompts were short and direct. The skill lies in knowing what to ask for, and in judging what comes back.</p>
+    </div>
+    <div class="prompt-grid" data-stagger>
+      <div class="card pcard"><h3><img src="assets/svg/check-12.svg" alt="">Setting up the toolkit, 26 Oct</h3><div class="mono sm"><p>https://github.com/nextlevelbuilder/ui-ux-pro-max-skill.git</p><p>install that skill</p></div><p class="res">Claude cloned the repo, checked its scripts for network and shell calls, fixed a broken path, tested it and packaged it.</p></div>
+      <div class="card pcard"><h3><img src="assets/svg/check-12.svg" alt="">Keeping the tools honest, 29 Oct</h3><p class="mono">I have a skill installed named "Animate". Can you check whether it has any extra code or commands that are taking more or extra credits? Or sharing credits with another account</p><p class="res sm">Claude read all 14 files and scanned them for network calls, hidden commands and account references before the skill went near the code.</p></div>
+      <div class="card pcard"><h3><img src="assets/svg/check-12.svg" alt="">Designing a new page, 29 Oct</h3><p class="mono">Create a thank-you page design in the given Figma link. Also use the same brand guidelines as in the Figma link. Also, make this page more lively and attractive; you can use the skill /ui-ux-pro-max</p><p class="res sm">Became a Figma frame, then pull requests #30 to #32, then the live Thank You page.</p></div>
+      <div class="card pcard"><h3><img src="assets/svg/check-12.svg" alt="">Connecting WordPress, 4 Nov</h3><p class="mono">I want to add this WordPress site as an MCP server to this AI tool. Don't ask me to confirm choices already specified above. After writing the config, restart or reload the MCP session, then verify by listing the server's tools.</p><p class="res sm">Opened the path to building all 28 pages as native Elementor content.</p></div>
+    </div>
+  </div>
+  <p class="foot">Prompts quoted from the designer's own Claude conversations</p><p class="pno">12</p>
+</section>
+
+<!-- 13 Close -->
+<section class="slide dark close" id="close" data-title="Close">
+  <img class="glow glow-13a" src="assets/svg/glow-13a.svg" alt="" aria-hidden="true">
+  <img class="glow glow-13b" src="assets/svg/glow-13b.svg" alt="" aria-hidden="true">
+  <div class="inner close-grid">
+    <div class="statement">
+      <h2 class="display close-title">
+        <span class="line"><span>A designer who ships,</span></span>
+        <span class="line red"><span>not just hand off.</span></span>
+      </h2>
+      <p class="sub" data-reveal>This project shows a working model for Folio3. Design keeps control of the result all the way to the live site, and AI tooling closes the gap between a Figma file and a page the team can edit.</p>
+    </div>
+    <ol class="points" data-stagger="120">
+      <li><span>01</span><div><b>Design intent survives the build</b><p>The person who designed each screen judged every coded version of it, so nothing was lost in translation.</p></div></li>
+      <li><span>02</span><div><b>Fewer handoffs, faster turns</b><p>A change went from idea to reviewed, deployed code without waiting on another team's queue.</p></div></li>
+      <li><span>03</span><div><b>A process that can repeat</b><p>The skills, prompts and pipeline are now in place for the next Folio3 site.</p></div></li>
+      <li><span>04</span><div><b>Accountable by design</b><p>Every change sits in GitHub with a review, a date and a linked session.</p></div></li>
+    </ol>
+  </div>
+  <p class="foot">Adil Shaikh, UI/UX Designer, Folio3</p><p class="pno">13</p>
+</section>
+
+</main>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
