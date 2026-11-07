@@ -20,6 +20,7 @@
   --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
   --pt: 96px;
+  --z: 1;
   --half: 497px;
 }
 
@@ -48,8 +49,8 @@ a { color: inherit; }
 .slide.dark { background: var(--ink); color: var(--hi); }
 .slide.light { background: var(--bg); color: var(--text); }
 .inner { position: relative; z-index: 2; width: 100%; max-width: 1123px; margin: 0 auto; padding: 0 64px; }
-@media (min-width: 1400px) { :root { --half: 557px; } .inner, .glance > .story-panel .story, .glance-right > * { zoom: 1.12; } }
-@media (min-width: 1700px) { :root { --half: 622px; } .inner, .glance > .story-panel .story, .glance-right > * { zoom: 1.25; } }
+@media (min-width: 1400px) { :root { --half: 557px; --z: 1.12; } .inner, .glance > .story-panel .story, .glance-right > * { zoom: 1.12; } }
+@media (min-width: 1700px) { :root { --half: 622px; --z: 1.25; } .inner, .glance > .story-panel .story, .glance-right > * { zoom: 1.25; } }
 
 .foot, .pno { position: absolute; bottom: 24px; font-size: 10px; color: var(--gray); z-index: 2; }
 .dark .foot, .dark .pno { color: var(--muted); }
@@ -180,7 +181,7 @@ a { color: inherit; }
 
 /* ---------- 04 Process ---------- */
 .glow-04 { width: 660px; height: 460px; left: calc(50% - 561px + 560px); top: 460px; border-radius: 50%; background: radial-gradient(closest-side, rgba(74,125,238,.22), rgba(74,125,238,0)); filter: blur(40px); animation: drift 15s ease-in-out infinite alternate; }
-.process .head .sub { max-width: 484px; margin-top: 12px; }
+.process .head .sub { max-width: none; margin-top: 12px; }
 .stages { position: relative; display: grid; grid-template-columns: repeat(5, 1fr); gap: 13px; margin-top: 18px; }
 .connector { position: absolute; left: 22px; right: -41px; top: 34px; height: 1.5px; background: linear-gradient(90deg, var(--blue), var(--red)); transform-origin: 0 50%; z-index: 0; }
 .stage { position: relative; z-index: 1; display: flex; flex-direction: column; gap: 9px; }
@@ -190,7 +191,7 @@ a { color: inherit; }
 .stage p { font-size: 11.5px; line-height: 1.5; color: var(--muted); }
 .chips { display: flex; flex-wrap: wrap; gap: 5px; }
 .chips li { padding: 3px 9px; border: 1px solid var(--line-d); border-radius: 40px; font-size: 10.5px; color: var(--hi); }
-.outputs { display: grid; grid-template-columns: repeat(5, 1fr); gap: 13px; margin-top: 99px; }
+.outputs { display: grid; grid-template-columns: repeat(5, 1fr); gap: 13px; margin-top: 34px; }
 .out { background: var(--card); border: 1px solid var(--line-d); border-radius: 9px; overflow: hidden; transition: transform .4s var(--ease), border-color .3s, box-shadow .4s; }
 .oshot { height: 113px; overflow: hidden; background: #fff; }
 .oshot img { width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform 1.2s var(--ease); }
@@ -486,3 +487,16 @@ html.lenis, html.lenis body { height: auto; }
 .lenis.lenis-smooth iframe { pointer-events: none; }
 .stack .slide { position: sticky; will-change: transform; }
 .stack-dim { position: absolute; inset: 0; z-index: 60; background: #000; opacity: 0; pointer-events: none; }
+
+/* Slides sized to the 1123 x 700 Figma frames */
+@media (min-width: 1181px) {
+  .slide.fit { min-height: calc(700px * var(--z)); padding-top: calc(57px * var(--z)); padding-bottom: calc(43px * var(--z)); justify-content: flex-start; }
+  .slide.fit .foot, .slide.fit .pno { bottom: calc(20px * var(--z)); }
+  .slide.fit.glance { padding: 0; }
+  .fit .story-panel { padding-top: calc(57px * var(--z)); padding-bottom: calc(200px * var(--z)); }
+  .fit .glance-right { padding-top: calc(57px * var(--z)); padding-bottom: calc(43px * var(--z)); justify-content: flex-start; }
+  .fit .summary { margin: 23px 0 33px; }
+  .fit .bars { height: 204px; }
+  .fit .story .big { margin-bottom: 30px; }
+  .slide.fit.close { justify-content: center; padding-top: calc(48px * var(--z)); }
+}
