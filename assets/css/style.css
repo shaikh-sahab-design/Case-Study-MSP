@@ -118,6 +118,12 @@ a { color: inherit; }
 .meta a:hover { color: var(--blue); }
 .who { display: flex; gap: 4px; align-items: flex-start; }
 .who img { width: 33px; height: 33px; border-radius: 50%; }
+.meta a.who { text-decoration: none; color: inherit; border-radius: 8px; }
+.meta a.who img { transition: box-shadow .3s var(--ease), transform .3s var(--ease); }
+.meta a.who b { transition: color .2s; }
+.meta a.who:hover img, .meta a.who:focus-visible img { box-shadow: 0 0 0 2px var(--blue); transform: scale(1.06); }
+.meta a.who:hover b, .meta a.who:focus-visible b { color: var(--blue); }
+.meta a.who:focus-visible { outline: 2px solid var(--blue); outline-offset: 4px; }
 
 .scroll-cue { position: absolute; left: 50%; bottom: 12px; transform: translateX(-50%); width: 22px; height: 34px; border: 1.5px solid var(--line-d); border-radius: 12px; z-index: 3; }
 .scroll-cue span { position: absolute; left: 50%; top: 7px; width: 3px; height: 7px; margin-left: -1.5px; border-radius: 2px; background: var(--hi); animation: cue 1.8s var(--ease) infinite; }
