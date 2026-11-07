@@ -25,7 +25,7 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
-body { margin: 0; background: var(--ink); color: var(--hi); font-family: var(--sans); line-height: 1.4; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+body { margin: 0; background: var(--ink); color: var(--hi); font-family: var(--sans); line-height: 1.4; -webkit-font-smoothing: antialiased; overflow-x: hidden; overflow-x: clip; }
 img { display: block; max-width: 100%; }
 p, h1, h2, h3, ul, ol, figure { margin: 0; padding: 0; }
 ul, ol { list-style: none; }
@@ -479,3 +479,10 @@ a { color: inherit; }
 .swap .frame { height: 500px; aspect-ratio: auto; }
 .swap .frame img { object-fit: cover; object-position: center top; }
 @media (max-width: 720px) { .swap .frame { height: auto; aspect-ratio: 543 / 500; } }
+
+/* ---------- Scroll stack ---------- */
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-stopped { overflow: clip; }
+.lenis.lenis-smooth iframe { pointer-events: none; }
+.stack .slide { position: sticky; will-change: transform; }
+.stack-dim { position: absolute; inset: 0; z-index: 60; background: #000; opacity: 0; pointer-events: none; }
