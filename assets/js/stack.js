@@ -75,13 +75,19 @@
         if (q <= 0) break;
         if (j === i + 1) p = q; else depth += q;
       }
+      // Slides buried under two or more later slides can't be seen: stop
+      // painting them so the browser isn't compositing a dozen layers at once
+      var hide = depth >= 1;
+      if (s.style.visibility !== (hide ? "hidden" : "")) s.style.visibility = hide ? "hidden" : "";
       if (p <= 0) {
+        s.style.willChange = "";
         s.style.transform = "";
         s.style.filter = "";
         s.style.borderRadius = "";
         s.lastChild.style.opacity = 0;
         continue;
       }
+      s.style.willChange = hide ? "" : "transform";
       var scale = 1 - (1 - (S.baseScale + i * S.itemScale)) * p;
       var drop = (p + depth) * S.stackDistance;
       var originY = Math.max(0, h - vh) + vh * S.stackPosition;

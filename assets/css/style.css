@@ -485,7 +485,8 @@ a { color: inherit; }
 html.lenis, html.lenis body { height: auto; }
 .lenis.lenis-stopped { overflow: clip; }
 .lenis.lenis-smooth iframe { pointer-events: none; }
-.stack .slide { position: sticky; will-change: transform; }
+.stack .slide { position: sticky; }
+.stack .slide[style*="hidden"] * { animation-play-state: paused; }
 .stack-dim { position: absolute; inset: 0; z-index: 60; background: #000; opacity: 0; pointer-events: none; }
 
 /* Slides sized to the 1123 x 700 Figma frames */
